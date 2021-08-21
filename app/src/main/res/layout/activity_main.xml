@@ -1,48 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MainActivity"
-    android:background="@android:color/black">
 
-    <io.fotoapparat.view.CameraView
-        android:id="@+id/camera_view"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_navigation_menu" />
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/fab_camera"/>
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".MainActivity"
+        android:background="@android:color/black">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-    android:id="@+id/fab_camera"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    app:fabSize="normal"
-    android:src="@drawable/ic_baseline_camera_24"
-    android:layout_alignParentBottom="true"
-    android:layout_margin="32dp"
-    android:layout_centerHorizontal="true"
-    app:backgroundTint="@android:color/white"/>
+        <io.fotoapparat.view.CameraView
+            android:id="@+id/camera_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/fab_camera"/>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_flash"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:fabSize="normal"
-        android:src="@drawable/ic_baseline_flash_on_24"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="32dp"
-        app:backgroundTint="@android:color/white"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="normal"
+            android:src="@drawable/ic_baseline_camera_24"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="32dp"
+            android:layout_centerHorizontal="true"
+            app:backgroundTint="@android:color/white"/>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_switch_camera"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:fabSize="normal"
-        android:src="@drawable/ic_baseline_switch_camera_24"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="32dp"
-        android:layout_alignParentRight="true"
-        app:backgroundTint="@android:color/white"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_flash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="normal"
+            android:src="@drawable/ic_baseline_flash_on_24"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="32dp"
+            app:backgroundTint="@android:color/white"/>
 
-</RelativeLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_switch_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="normal"
+            android:src="@drawable/ic_baseline_switch_camera_24"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="32dp"
+            android:layout_alignParentRight="true"
+            app:backgroundTint="@android:color/white"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
